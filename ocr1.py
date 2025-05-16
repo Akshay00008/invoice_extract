@@ -9,7 +9,7 @@ openai.api_key = os.getenv("OPENAI_API_KEY")
 def encode_image(image_bytes):
     return base64.b64encode(image_bytes).decode("utf-8")
 
-st.title("Invoice OCR with GPT-4o Vision")
+st.title("Invoice Extraction")
 
 uploaded_file = st.file_uploader("Upload an invoice image", type=["png", "jpg", "jpeg"])
 
@@ -20,7 +20,7 @@ if uploaded_file is not None:
 
     prompt_text = "Extract the details from this invoice:\n"
 
-    with st.spinner("Processing image with GPT-4o Vision..."):
+    with st.spinner("Processing invoice."):
         try:
             response = openai.chat.completions.create(
                 model="gpt-4o",
