@@ -1,0 +1,12 @@
+bson
+requests
+pandas
+msal
+nlp
+openai
+beautifulsoup4
+transformers
+spacy
+torch
+tensorflow
+tf-keras
